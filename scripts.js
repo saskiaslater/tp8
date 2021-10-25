@@ -31,6 +31,35 @@ function loadFileInto(fromFile, whereTo) {
 }
 
 
+// new Recipe object
+function Recipe(recipeName, contributorName, imageURL, ingredientsFilename, equipmentFilename, directionsFilename){
+  
+  this.recipe = recipeName;
+  this.contributor = contributorName;
+  this.img = imageURL;
+  this.ingredients = ingredientsFilename;
+  this.equipment = equipmentFilename;
+  this.directions = directionsFilename;
+  
+  this.displayRecipe = function(){
+    
+    document.querySelector("#foodbkgd h1").innerHTML = this.recipe;
+    document.querySelector("#contributor").innerHTML = this.contributor;
+    document.querySelector("#foodbkgd").style.backgroundImage = "url(" + this.img + ")";
+    
+    
+    
+  loadFileInto(this.ingredients, "#ingredients ul");
+  loadFileInto(this.equipment, "#equipment ul");
+  loadFileInto(this.directions, "#directions ol");
+    
+  }
+  
+}
+
+
+CauliflowerMacNCheese = new Recipe("Cauliflower Mac-N-Cheese", "Saskia", "https://images.unsplash.com/photo-1543339494-b4cd4f7ba686?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80", "ingredients.html", "equipment.html", "directions.html");
+
 
 
 window.onload = function() {
@@ -57,10 +86,18 @@ window.onload = function() {
   document.querySelector(".copyright").innerHTML += "<p><strong>This recipe was taken for the purpose of a school project for DTC 477 at Washington State University.<strong></p>";
   
   
+  document.querySelector("#r1").onclick = function() {
+    CauliflowerMacNCheese.displayRecipe();
+  }
+    
+  document.querySelector("#r2").onclick = function() {
+    ChocolateChipCookies.displayRecipe();
+  }
+
+   document.querySelector("#r3").onclick = function() {
+    LemonBars.displayRecipe();
+  }
+
   
-  
-  loadFileInto("ingredients.html", "#ingredients ul");
-  loadFileInto("equipment.html", "#equipment ul");
-  loadFileInto("directions.html", "#directions ol");
   
 } // end of window.onload
