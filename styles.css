@@ -17,7 +17,7 @@ div {
   
 h1 {
   font-family: "Cookbook Title";
-  color: Orange;
+  color: White;
   font-size: 50px;
 }
 
@@ -69,6 +69,20 @@ ol.showMe {
   font-size: 12px;
   font-style: italic;
 }
+
+
+#block1 {
+  display: block;
+}
+
+#block2: {
+  display: block;
+}
+
+#block3: {
+  display: block;
+}
+
 
 #ingredients {
   font-family: Calibri;

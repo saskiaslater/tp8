@@ -60,6 +60,13 @@ function Recipe(recipeName, contributorName, imageURL, ingredientsFilename, equi
 
 CauliflowerMacNCheese = new Recipe("Cauliflower Mac-N-Cheese", "Saskia", "https://images.unsplash.com/photo-1543339494-b4cd4f7ba686?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80", "ingredients.html", "equipment.html", "directions.html");
 
+ChocolateChipCookies = new Recipe("Chocolate Chip Cookies", "Aida", "https://images.unsplash.com/photo-1584847801423-852691e41bc7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80", "ingredientsA.html", "equipmentA.html", "directionsA.html");
+AnotherRecipe = new Recipe();
+
+LemonBars = new Recipe("Lemon Bars", "Cody", "https://images.unsplash.com/photo-1587496679742-bad502958fbf?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bGVtb258ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60", "ingredientsC.html", "equipmentC.html", "directionsC.html");
+AnotherRecipe = new Recipe();
+
+
 
 
 window.onload = function() {
